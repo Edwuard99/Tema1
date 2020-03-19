@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-class Nod{
+class Node{
     int value;
-    Nod *next;
-    //Nod *prev;
+    Node *next;
+    //Node *prev;
 
 public: 
-    Nod(int value){
+    Node(int value){
         this->value = value;
         this->next = NULL;
     }
@@ -18,87 +18,115 @@ public:
     int getValue(){
         return this->value;
     }
-    void setNext(Nod *next){
+    void setNext(Node *next){
         this->next = next;
     }
-    Nod *getNext(){
+    Node *getNext(){
         return this->next;
     }
-    /*void setPrev(Nod *prev){
+    /*void setPrev(Node *prev){
         this->prev = prev;
     }
-    Nod getPrev(){
+    Node getPrev(){
         return *prev;
     }*/
 };
 
 class MultimeDinamic{
-    Nod *first = NULL;
-    Nod *current = NULL;
+    const Node *first = NULL;
+    Node *current = NULL;
 
 public:
+    MultimeDinamic(int value){
+        first = new Node(value);
+        current = const_cast<Node *>(first);
+    }
+    MultimeDinamic(MultimeDinamic &m){
+        this->first = new Node(*m.first);
+        this->current = const_cast<Node *>(first);
+        m.current = const_cast<Node *>(m.first);
+        m.current = m.current->getNext();
+        while(true){
+            Node *nou = new Node(m.current->getValue());
+            current->setNext(nou);
+            if(m.current->getNext() == NULL)
+                break;
+            current = current->getNext();
+            m.current = m.current->getNext();
+
+        }
+    }
 
     MultimeDinamic(int v[], int size){
-        first = new Nod(v[0]);
-        current = first;
-        Nod *nou = NULL;
-        for(int i = 1; i < size; i++){
-            nou = new Nod(v[i]);
-            current->setNext(nou);
-            current = nou;
+        first = new Node(v[0]);
+        addVector(v++, size--);
+    }
+
+    ~MultimeDinamic(){
+        current = const_cast<Node *>(first);
+        removeMultime(current);
+        first = NULL;
+        current = NULL;
+        printMultime();
+    }
+    void addNode(int value){
+        Node *nou = new Node(value);
+        current->setNext(nou);
+        current = current->getNext();
+
+    }
+
+    void removeMultime(Node* n){
+        if(n->getNext() != NULL){
+            removeMultime(n->getNext());
+        }
+        delete n;
+    }
+
+
+    void addVector(int v[], int size){
+        //first = new Node(v[0]);
+        current = const_cast<Node *>(first);
+        for(int i = 0; i < size; i++){
+            addNode(v[i]);
         }
     }
 
     void printMultime() {
-        current = first;
+        current = const_cast<Node *>(first);
         while(true){
             cout << current->getValue() << ' ';
             if(current->getNext() == NULL)
                 break;
             current = current->getNext();
         }
+        cout << endl;
     }
-
 
 };
 
+MultimeDinamic operator + (MultimeDinamic m1, MultimeDinamic m2){
+    MultimeDinamic reuniune = new MultimeDinamic;
+}
+
 /*void printVector(int v[], int size){
     cout << sizeof(&v) << endl;
-    for(int i = 0; i <= sizeof(v)/4; i++){
-        cout << v[i] << ' ';
+    for(int i = 0; ; i++){
+        cout << *v << ' ';
+        v++;
     }
 }*/
 
 
 
 int main() {
-    /*Nod n1 = Nod(1);
-    Nod n2 = Nod(2);
-    Nod n3 = Nod(3);
-    Nod n4 = Nod(4);
-    Nod n5 = Nod(5);
-    Nod n6 = Nod(6);
-
-    n1.setNext(&n2);
-    n2.setNext(&n3);
-    n3.setNext(&n4);
-    n4.setNext(&n5);
-    n5.setNext(&n6);
-
-
-    Nod current = n1;
-    while(true){
-        cout << current.getValue() << ' ';
-        if(current.getNext() == NULL)
-            break;
-        current = *current.getNext();
-
-    }*/
-
     int v[6] = {1, 2, 3, 4, 5, 6};
     int size = sizeof(v)/4;
 
     MultimeDinamic m = MultimeDinamic(v, size);
+
+    m.printMultime();
+    m.addNode(8);
     m.printMultime();
 
 
