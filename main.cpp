@@ -6,9 +6,10 @@ class Nod{
     Nod *next;
     //Nod *prev;
 
-public:
+public: 
     Nod(int value){
         this->value = value;
+        this->next = NULL;
     }
 
     void setValue(int value){
@@ -32,17 +33,18 @@ public:
 };
 
 class MultimeDinamic{
-    Nod first = NULL;
-    Nod current = NULL;
+    Nod *first = NULL;
+    Nod *current = NULL;
 
 public:
 
     MultimeDinamic(int v[], int size){
-        first = Nod(v[0]);
+        first = new Nod(v[0]);
         current = first;
+        Nod *nou = NULL;
         for(int i = 1; i < size; i++){
-            Nod nou = Nod(v[i]);
-            current.setNext(&nou);
+            nou = new Nod(v[i]);
+            current->setNext(nou);
             current = nou;
         }
     }
@@ -50,10 +52,10 @@ public:
     void printMultime() {
         current = first;
         while(true){
-            cout << current.getValue() << ' ';
-            if(current.getNext() == NULL)
+            cout << current->getValue() << ' ';
+            if(current->getNext() == NULL)
                 break;
-            current = *current.getNext();
+            current = current->getNext();
         }
     }
 
