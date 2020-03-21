@@ -6,9 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/edidi/CLionProjects/Tema1/main.cpp
+C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.cpp
+MultimeDinamic.h
+C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h
 iostream
 -
 algorithm
 -
+
+C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h
+Node.h
+C:/Users/edidi/CLionProjects/Tema1/Node.h
+
+C:/Users/edidi/CLionProjects/Tema1/Node.cpp
+Node.h
+C:/Users/edidi/CLionProjects/Tema1/Node.h
+
+C:/Users/edidi/CLionProjects/Tema1/Node.h
+
+C:/Users/edidi/CLionProjects/Tema1/main.cpp
+iostream
+-
+MultimeDinamic.h
+C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h
 

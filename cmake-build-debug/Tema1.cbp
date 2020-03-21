@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.cpp">
+			<Option target="Tema1"/>
+		</Unit>
+		<Unit filename="C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h">
+			<Option target="Tema1"/>
+		</Unit>
+		<Unit filename="C:/Users/edidi/CLionProjects/Tema1/Node.cpp">
+			<Option target="Tema1"/>
+		</Unit>
+		<Unit filename="C:/Users/edidi/CLionProjects/Tema1/Node.h">
+			<Option target="Tema1"/>
+		</Unit>
 		<Unit filename="C:/Users/edidi/CLionProjects/Tema1/main.cpp">
 			<Option target="Tema1"/>
 		</Unit>

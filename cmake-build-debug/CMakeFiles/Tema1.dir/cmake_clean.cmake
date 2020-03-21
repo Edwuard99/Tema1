@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Tema1.dir/MultimeDinamic.cpp.obj"
+  "CMakeFiles/Tema1.dir/Node.cpp.obj"
   "CMakeFiles/Tema1.dir/main.cpp.obj"
   "Tema1.exe"
   "Tema1.exe.manifest"

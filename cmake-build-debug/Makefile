@@ -122,6 +122,60 @@ Tema1/fast:
 	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/build
 .PHONY : Tema1/fast
 
+MultimeDinamic.obj: MultimeDinamic.cpp.obj
+
+.PHONY : MultimeDinamic.obj
+
+# target to build an object file
+MultimeDinamic.cpp.obj:
+	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/MultimeDinamic.cpp.obj
+.PHONY : MultimeDinamic.cpp.obj
+
+MultimeDinamic.i: MultimeDinamic.cpp.i
+
+.PHONY : MultimeDinamic.i
+
+# target to preprocess a source file
+MultimeDinamic.cpp.i:
+	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/MultimeDinamic.cpp.i
+.PHONY : MultimeDinamic.cpp.i
+
+MultimeDinamic.s: MultimeDinamic.cpp.s
+
+.PHONY : MultimeDinamic.s
+
+# target to generate assembly for a file
+MultimeDinamic.cpp.s:
+	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/MultimeDinamic.cpp.s
+.PHONY : MultimeDinamic.cpp.s
+
+Node.obj: Node.cpp.obj
+
+.PHONY : Node.obj
+
+# target to build an object file
+Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/Node.cpp.obj
+.PHONY : Node.cpp.obj
+
+Node.i: Node.cpp.i
+
+.PHONY : Node.i
+
+# target to preprocess a source file
+Node.cpp.i:
+	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/Node.cpp.i
+.PHONY : Node.cpp.i
+
+Node.s: Node.cpp.s
+
+.PHONY : Node.s
+
+# target to generate assembly for a file
+Node.cpp.s:
+	$(MAKE) -f CMakeFiles\Tema1.dir\build.make CMakeFiles/Tema1.dir/Node.cpp.s
+.PHONY : Node.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +212,12 @@ help:
 	@echo ... Tema1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... MultimeDinamic.obj
+	@echo ... MultimeDinamic.i
+	@echo ... MultimeDinamic.s
+	@echo ... Node.obj
+	@echo ... Node.i
+	@echo ... Node.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
