@@ -12,7 +12,7 @@ public:
     explicit MultimeDinamic(int value);
     MultimeDinamic(MultimeDinamic &m);
     MultimeDinamic(int v[], int size);
-    //~MultimeDinamic();
+    ~MultimeDinamic();
 
     Node* getFirst();
     Node* getCurrent();
@@ -20,10 +20,16 @@ public:
     void addNode(int value);
     int getNextValue();
 
+    void operator = (MultimeDinamic m);
+
     void printMultime();
 
 private:
     static void removeMultime(Node* n);
 };
+
+MultimeDinamic operator + (MultimeDinamic m1, MultimeDinamic m2);
+MultimeDinamic operator * (MultimeDinamic m1, MultimeDinamic m2);
+MultimeDinamic operator - (MultimeDinamic m1, MultimeDinamic m2);
 
 #endif //TEMA1_MULTIMEDINAMIC_H
