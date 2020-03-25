@@ -5,8 +5,8 @@ using namespace std;
 int main() {
     int v[] = {1, 2, 3, 6, 5, 4, 4, 3, 10, 11, 12, 15 ,17 ,12, 89, 90, 57, 69, 169};
     int u[] = {1, 2, 3, 3, 3, 9, 4, 10, 5, 17, 89, 89, 90, 91, 169};
-    int vsize = sizeof(v)/4;
-    int usize = sizeof(u)/4;
+    int vsize = sizeof(v)/sizeof(int);
+    int usize = sizeof(u)/sizeof(int);
 
     MultimeDinamic m1 = MultimeDinamic(v, vsize);
     MultimeDinamic m2 = MultimeDinamic(u, usize);

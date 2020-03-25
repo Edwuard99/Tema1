@@ -7,12 +7,12 @@
 #IncludeRegexTransform: 
 
 C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.cpp
-MultimeDinamic.h
-C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h
 iostream
 -
 algorithm
 -
+MultimeDinamic.h
+C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h
 
 C:/Users/edidi/CLionProjects/Tema1/MultimeDinamic.h
 Node.h

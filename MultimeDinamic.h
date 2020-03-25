@@ -20,12 +20,12 @@ public:
     void addNode(int value);
     int getNextValue();
 
-    void operator = (MultimeDinamic m);
+    MultimeDinamic& operator = (MultimeDinamic m);
 
     void printMultime();
 
 private:
-    static void removeMultime(Node* n);
+    void removeMultime(Node* n);
 };
 
 MultimeDinamic operator + (MultimeDinamic m1, MultimeDinamic m2);

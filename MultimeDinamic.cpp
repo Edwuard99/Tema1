@@ -1,6 +1,6 @@
-#include "MultimeDinamic.h"
 #include <iostream>
 #include <algorithm>
+#include "MultimeDinamic.h"
 
 MultimeDinamic :: MultimeDinamic() = default;
 MultimeDinamic :: MultimeDinamic(int value){
@@ -58,7 +58,7 @@ int MultimeDinamic :: getNextValue(){
     return rez;
 }
 
-void MultimeDinamic :: operator = (MultimeDinamic m) {
+MultimeDinamic& MultimeDinamic :: operator = (MultimeDinamic m) {
     this->first = new Node(*m.first);
     this->resetCurrent();
     m.resetCurrent();
@@ -68,6 +68,7 @@ void MultimeDinamic :: operator = (MultimeDinamic m) {
     }
     m.resetCurrent();
     this->resetCurrent();
+    return *this;
 }
 
 void MultimeDinamic :: printMultime() {
@@ -138,7 +139,7 @@ MultimeDinamic operator + (MultimeDinamic m1, MultimeDinamic m2){
     }
 
     reuniune.resetCurrent();
-    return MultimeDinamic(reuniune);
+    return reuniune;
 }
 
 MultimeDinamic operator * (MultimeDinamic m1, MultimeDinamic m2){
